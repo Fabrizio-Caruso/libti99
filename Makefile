@@ -1,6 +1,6 @@
 # Paths to TMS9900 compilation tools 
 # ( Set in environment to override paths )
-TMS9900_DIR?=~/gcc9900/bin
+TMS9900_DIR?=/opt/gcc4ti/bin
 ELF2EA5_DIR?=~/gcc9900/bin
 EA5_SPLIT_DIR?=~/gcc9900/bin
 CLASSIC99_DSK1?=/mnt/d/classic99/DSK1/
@@ -149,7 +149,7 @@ OBJECT_LIST=\
   vdp_writestring.o
 
 # Recipe to compile the library
-all: library test example
+all: library 
 
 library: $(OBJECT_LIST)
 	$(AR) rcs $(NAME) $(OBJECT_LIST)
